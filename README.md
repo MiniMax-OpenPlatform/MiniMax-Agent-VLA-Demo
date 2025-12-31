@@ -65,17 +65,17 @@ pip install -r requirements.txt
 
 或手动安装：
 ```bash
-pip install torch numpy pillow
+pip install torch numpy pillow einops draccus
 pip install mujoco          # 物理仿真引擎
-pip install lerobot         # HuggingFace机器人学习库 (含Pi05)
-pip install libero          # 机器人仿真环境
+pip install libero robosuite # 机器人仿真环境
 pip install anthropic mcp   # LLM和MCP客户端
+pip install transformers huggingface_hub  # Pi05模型依赖
 ```
 
 **依赖项说明:**
 | 依赖 | 来源 | 说明 |
 |------|------|------|
-| LeRobot | `pip install lerobot` | HuggingFace机器人学习库，包含Pi05策略 |
+| LeRobot | 已包含在项目中 | HuggingFace机器人学习库，包含Pi05策略 |
 | MuJoCo | `pip install mujoco` | DeepMind物理仿真引擎 |
 | LIBERO | `pip install libero` | 机器人操作仿真基准环境 |
 | MCP | `pip install mcp` | Model Context Protocol客户端 |
@@ -140,8 +140,14 @@ MiniMax-Agent-VLA-Demo/
 ├── run_robot.py               # 简单模式：仅VLA
 ├── requirements.txt           # Python依赖
 ├── README.md                  # 说明文档
+├── lerobot/                   # LeRobot核心库 (已包含)
+│   ├── envs/                  # 环境封装 (LIBERO, MetaWorld)
+│   ├── policies/              # 策略模型 (Pi0, Pi05)
+│   ├── configs/               # 配置系统
+│   ├── processor/             # 数据处理
+│   └── utils/                 # 工具函数
 └── models/                    # (需下载)
-    └── pi05_libero_finetuned/ # Pi05模型文件
+    └── pi05_libero_finetuned/ # Pi05模型权重
 ```
 
 ## 常见问题

@@ -2,14 +2,20 @@
 torch>=2.0.0
 numpy
 pillow
+einops
+draccus
 
 # Physics simulation
 mujoco>=3.0.0
 
-# Robot learning
-lerobot>=0.4.0
+# Robot simulation
 libero
+robosuite
 
 # LLM and MCP
 anthropic
 mcp
+
+# Transformers for Pi05
+transformers
+huggingface_hub
