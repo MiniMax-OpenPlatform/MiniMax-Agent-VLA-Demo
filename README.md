@@ -4,7 +4,9 @@
 
 ## Demo
 
-https://github.com/user-attachments/assets/robot.mp4
+[![Demo Video](https://img.shields.io/badge/Demo-Video-red)](./robot.mp4)
+
+> 点击下载查看演示视频: [robot.mp4](./robot.mp4)
 
 ## 系统架构
 

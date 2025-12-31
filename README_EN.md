@@ -4,7 +4,9 @@ A robot agent system based on Pi05 VLA model and MiniMax-M2.1 LLM for manipulati
 
 ## Demo
 
-https://github.com/user-attachments/assets/robot.mp4
+[![Demo Video](https://img.shields.io/badge/Demo-Video-red)](./robot.mp4)
+
+> Click to download demo video: [robot.mp4](./robot.mp4)
 
 ## Architecture
 
