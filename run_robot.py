@@ -1,11 +1,10 @@
 #!/usr/bin/env python
 """Interactive Pi05 robot control - using original project processing pipeline."""
 import os
-os.environ["DISPLAY"] = ":2"
+os.environ.setdefault("DISPLAY", ":2")
 os.environ["PYTHONUNBUFFERED"] = "1"
 
 import sys
-sys.path.insert(0, "/data1/devin/robot1/lerobot/src")
 sys.stdout.reconfigure(line_buffering=True)
 
 import mujoco
@@ -21,7 +20,7 @@ import time
 import threading
 import queue
 
-MODEL_PATH = "/data1/devin/robot1/models/pi05_libero_finetuned"
+MODEL_PATH = os.environ.get("PI05_MODEL_PATH", "./models/pi05_libero_finetuned")
 cmd_queue = queue.Queue()
 
 def quat_to_axisangle(quat):

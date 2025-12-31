@@ -28,7 +28,7 @@ import time
 import threading
 import queue
 
-MODEL_PATH = "/data1/devin/robot1/models/pi05_libero_finetuned"
+MODEL_PATH = os.environ.get("PI05_MODEL_PATH", "./models/pi05_libero_finetuned")
 
 # Tools for LLM agent
 AGENT_TOOLS = [

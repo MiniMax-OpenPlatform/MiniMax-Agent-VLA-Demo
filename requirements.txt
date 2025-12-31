@@ -1,0 +1,18 @@
+# Core dependencies
+torch>=2.0.0
+numpy
+pillow
+
+# Physics simulation
+mujoco>=3.0.0
+
+# Robot learning
+libero
+
+# LLM and MCP
+anthropic
+mcp
+
+# LeRobot - install separately:
+# git clone https://github.com/huggingface/lerobot.git
+# cd lerobot && pip install -e ".[dev]"
