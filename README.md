@@ -59,16 +59,29 @@ snapshot_download(
 python -m venv .venv
 source .venv/bin/activate
 
-# 安装LeRobot
+# 克隆并安装LeRobot (HuggingFace官方机器人学习库)
+git clone https://github.com/huggingface/lerobot.git
 cd lerobot
 pip install -e ".[dev]"
+cd ..
 
-# 安装LIBERO
+# 安装MuJoCo (物理仿真引擎)
+pip install mujoco
+
+# 安装LIBERO (机器人仿真环境)
 pip install libero
 
 # 安装MCP客户端和其他依赖
-pip install mcp anthropic mujoco pillow
+pip install mcp anthropic pillow
 ```
+
+**依赖项说明:**
+| 依赖 | 来源 | 说明 |
+|------|------|------|
+| LeRobot | https://github.com/huggingface/lerobot | HuggingFace机器人学习库，包含Pi05策略 |
+| MuJoCo | `pip install mujoco` | DeepMind物理仿真引擎 |
+| LIBERO | `pip install libero` | 机器人操作仿真基准环境 |
+| MCP | `pip install mcp` | Model Context Protocol客户端 |
 
 ## 运行
 
@@ -125,12 +138,13 @@ LIBERO Goal场景支持以下10个任务：
 ## 文件结构
 
 ```
-robot1/
+MiniMax-Agent-VLA-Demo/
 ├── agent_mode.py              # Agent模式：LLM + VLA + MCP
 ├── run_robot.py               # 简单模式：仅VLA
-├── models/
+├── README.md                  # 说明文档
+├── models/                    # (需下载)
 │   └── pi05_libero_finetuned/ # Pi05模型文件
-└── lerobot/                   # LeRobot库
+└── lerobot/                   # (需克隆) HuggingFace LeRobot库
 ```
 
 ## 常见问题
