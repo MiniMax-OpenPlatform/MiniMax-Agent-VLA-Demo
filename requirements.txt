@@ -7,12 +7,9 @@ pillow
 mujoco>=3.0.0
 
 # Robot learning
+lerobot>=0.4.0
 libero
 
 # LLM and MCP
 anthropic
 mcp
-
-# LeRobot - install separately:
-# git clone https://github.com/huggingface/lerobot.git
-# cd lerobot && pip install -e ".[dev]"
