@@ -2,6 +2,10 @@
 
 基于 Pi05 VLA 模型和 MiniMax-M2.1 LLM 的机器人Agent系统，在 LIBERO 仿真环境中执行操作任务。
 
+## Demo
+
+https://github.com/user-attachments/assets/robot.mp4
+
 ## 系统架构
 
 ```

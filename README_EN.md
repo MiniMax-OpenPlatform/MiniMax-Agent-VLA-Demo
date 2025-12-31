@@ -2,6 +2,10 @@
 
 A robot agent system based on Pi05 VLA model and MiniMax-M2.1 LLM for manipulation tasks in LIBERO simulation environment.
 
+## Demo
+
+https://github.com/user-attachments/assets/robot.mp4
+
 ## Architecture
 
 ```
